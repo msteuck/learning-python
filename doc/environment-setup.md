@@ -6,6 +6,8 @@ We'll use Windows Subsystem for Linux 2, so that everything should work in Linux
 
 ## Set up Windows first
 
+### Git
+
 - Install Git
   - Use VS Code as Git's default editor
   - Override default branch name to "main" instead of "master"
@@ -19,6 +21,10 @@ We'll use Windows Subsystem for Linux 2, so that everything should work in Linux
   - Extra options: yes to enable file system caching, no to enable symbolic links
   - Enable experimental support for pseudo-consoles
   - Enable experimental built-in file system monitor
+
+- First time using git in VS Code:
+  - `git config --global user.email "msteuck@gmail.com"`
+  - `git config --global user.name "Mathew Steuck"`
 
 ## Install Docker Desktop on Windows
 
