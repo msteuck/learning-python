@@ -4,6 +4,22 @@ We'll use Windows Subsystem for Linux 2, so that everything should work in Linux
 
 [One resource](https://towardsdatascience.com/how-to-create-perfect-machine-learning-development-environment-with-wsl2-on-windows-10-11-2c80f8ea1f31) for environment setup.
 
+## Set up Windows first
+
+- Install Git
+  - Use VS Code as Git's default editor
+  - Override default branch name to "main" instead of "master"
+  - PATH environment: Git from the command line and also 3rd-party software
+  - Use bundled OpenSSH
+  - HTTPS transport backend: native Windows Secure Channel library
+  - Line endings: checkout Windows-style, commit Unix-style
+  - Terminal emulator: Use Windows' default console window
+  - Default behavior of git pull: "Default (fast-forward or merge)
+  - Credential manager: Use the default cross-platform git credential manager
+  - Extra options: yes to enable file system caching, no to enable symbolic links
+  - Enable experimental support for pseudo-consoles
+  - Enable experimental built-in file system monitor
+
 ## Install Docker Desktop on Windows
 
 ## Install WSL2
