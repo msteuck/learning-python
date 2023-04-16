@@ -30,6 +30,12 @@ We'll use Windows Subsystem for Linux 2, so that everything should work in Linux
 
 ## Install WSL2
 
+In a command prompt with administrator privileges:
+
+```bash
+wsl --install -d Ubuntu
+```
+
 ## Set up a Linux admin username and password
 
 Store them in lastpass.
