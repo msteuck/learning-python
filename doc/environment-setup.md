@@ -38,7 +38,7 @@ wsl --install -d Ubuntu
 
 ## Set up a Linux admin username and password
 
-Store them in lastpass.
+Stored in lastpass.
 
 ## Update and upgrade packages in WSL2
 
