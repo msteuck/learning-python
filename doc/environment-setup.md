@@ -66,7 +66,7 @@ git config --global user.name "Mathew Steuck"
 Then, on CMD, run `git update-git-for-windows`. Then, on the Ubuntu terminal, run the following command:
 
 ```bash
-git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager-core.exe"
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
 ```
 
 ## Configure Docker for WSL2
