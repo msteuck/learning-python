@@ -6,7 +6,7 @@ We'll use Windows Subsystem for Linux 2, so that everything should work in Linux
 
 ## Set up Windows first
 
-### Git
+### Windows Git
 
 - Install Git
   - Use VS Code as Git's default editor
@@ -26,7 +26,11 @@ We'll use Windows Subsystem for Linux 2, so that everything should work in Linux
   - `git config --global user.email "msteuck@gmail.com"`
   - `git config --global user.name "Mathew Steuck"`
 
+### Install VS Code
+
 ## Install Docker Desktop on Windows
+
+[Docker site](https://www.docker.com/).
 
 ## Install WSL2
 
@@ -42,16 +46,39 @@ Stored in lastpass.
 
 ## Update and upgrade packages in WSL2
 
+```bash
+sudo apt update && sudo apt upgrade
+```
+
 ## Install VS Code for WSL2
+
+If you have VSCode installed on Windows, you can use it to open any WSL2 folder. You only need to install the [Remote Extension Development Pack extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack).
 
 ## Install and set up git for WSL2
 
+In WSL2:
+
+```bash
+git config --global user.email "msteuck@gmail.com"
+git config --global user.name "Mathew Steuck"
+```
+
+Then, on CMD, run `git update-git-for-windows`. Then, on the Ubuntu terminal, run the following command:
+
+```bash
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager-core.exe"
+```
+
 ## Configure Docker for WSL2
+
+This step is straightforward as we've already installed Docker in the beginning. To link Docker Desktop to WSL2, go to Docker Desktop > Settings > Resources > WSL integration and toggle the Ubuntu button to 'on'. Then, press apply & restart the terminal for the changes to take effect.
+
+Afterward, you should be able to run `docker --version` successfully on WSL2 terminal.
 
 ## Install Python, pip, and venv for WSL2
 
 ```bash
-sudo apt update && upgrade
+sudo apt update && sudo apt upgrade
 sudo apt install python3 python3-pip python3-venv ipython3
 ```
 
