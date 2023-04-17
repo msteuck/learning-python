@@ -41,7 +41,46 @@ At terminal:
 ​ 	========================== 1 passed in 0.01s ===========================
 ```
 
-Passing `-v` or `--verbose` parameter will provide verbose output.
+Passing `-v` or `--verbose` parameter will provide verbose output. Can give good information about exactly how the output and expected output are different.
+
+`--tb=no` flag will turn off tracebacks.
+
+Can specify files individually or by directory
+
+```bash
+pytest --tb=no test_one.py test_two.py
+```
+or
+```bash
+pytest --tb=no src/testing-with-pytest/ch1
+```
+Can also specify individual functions to be tested:
+```bash
+pytest --tb=no src/testing-with-pytest/ch1/test_one.py::test_passing
+```
+
+##### Test discovery
+
+Given no arguments, pytest looks at your current directory and all subdirectories for test files and runs the test code it finds.
+If you give pytest a filename, a directory name, or a list of those, it looks there instead of the current directory.
+Each directory listed on the command line is examined for test code, as well as any subdirectories.
+
+Here are the naming conventions to keep test code discoverable by pytest:
+- Test files should be named `test_<something>.py` or `<something>_test.py`.
+- Test methods and functions should be named `test_<something>`.
+- Test classes should be named `Test<Something>`.
+
+Configuration files can be used to alter the discovery rules.
+
+##### Test Outcomes
+
+Possible outcomes:
+- PASSED (.)
+- FAILED (F)
+- SKIPPED (s)
+- XFAIL (x) -- the test not supposed to pass, and it ran and failed
+- XPASS (X) -- the test was marked with xfail, but it ran and passed
+- ERROR (E) -- an error with execution of a fixture or hook function, not within the test function
 
 ## Other parts
 
