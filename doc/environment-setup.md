@@ -85,3 +85,15 @@ sudo apt install python3 python3-pip python3-venv ipython3
 ## Optional: Modify .bashrc to make WSL2 terminal prettier
 
 ## Optional: Install CUDA and cuDNN drivers on WSL2
+
+## Optional: pytest
+
+Recommendation for starting a Python virtual environment in Linux and installing pytest
+
+```bash
+$ python3 -m venv venv
+$ source venv/bin/activate
+(venv) $ pip install pytest
+```
+
+The end.
